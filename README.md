@@ -235,5 +235,3 @@ Use the search bar in the room header to search for messages by content or sende
 ### Message Reactions
 ![Message Reactions](screenshots/reactions.png)
 *Adding emoji reactions to messages*
-
-## 🌐 Deployment
