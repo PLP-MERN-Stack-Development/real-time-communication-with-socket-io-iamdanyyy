@@ -1,0 +1,159 @@
+.message {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.system-message {
+  text-align: center;
+  color: #999;
+  font-size: 0.85rem;
+  font-style: italic;
+  padding: 5px 0;
+}
+
+.own-message {
+  align-items: flex-end;
+}
+
+.other-message {
+  align-items: flex-start;
+}
+
+.message-sender {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #667eea;
+  margin-bottom: 4px;
+}
+
+.message-content {
+  position: relative;
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.own-message .message-content {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.private-message .message-content {
+  border: 2px solid #ffd700;
+}
+
+.message-content p {
+  margin: 0;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.message-time {
+  font-size: 0.75rem;
+  color: #999;
+  margin-top: 4px;
+  padding: 0 5px;
+}
+
+.message-reactions {
+  display: flex;
+  gap: 5px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.reaction-badge {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.own-message .reaction-badge {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.reaction-badge:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.add-reaction-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-content:hover .add-reaction-btn {
+  opacity: 1;
+}
+
+.own-message .add-reaction-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.reaction-picker {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+  z-index: 10;
+}
+
+.reaction-emoji {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.reaction-emoji:hover {
+  background: #f0f0f0;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .message-content {
+    max-width: 85%;
+  }
+}
+
